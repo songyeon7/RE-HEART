@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">  
+        <style>
+            body {
+                background: #ffffff;
+            }
+        </style>
+    
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+        <script type="text/javascript"
+            src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=6cb98adbc3bfdcc9903aa83189a599d0&libraries=services,clusterer,drawing"></script>
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script src="/public/map.js" type="module"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style data-emotion="css reheart" data-s>
+            .css-reheart {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                height: 100%;
+                margin: 0 auto;
+                width: 100%;
+            }
+     
+            @media(min-width: 1171px) {
+                .css-reheart {
+                    width: 1170px;
+                }
+            }
+        </style>
+        <style>
+            .menu{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                height: 80px;
+                position: fixed;
+                top: 0; 
+                left: 0;
+                justify-content: center;
+            } 
+            .map{
+                float: left;
+            }
+            .tbox{
+                position: absolute;
+                left: 10px;
+                top: 20px;
+            }
+        </style>
+        </head>
+<body style="overflow: unset;">
+    <div id="_next">
+        <header style="position: sticky;top:0;display:flex;justify-content:space-between;width:100%;height:60px;background:#FFF5F5;box-shadow:0px 4px 20px rgba(96, 96, 96, 0.25);z-index:5">
+            <div style="flex-direction: row;align-items:center;justify-content:space-between" class="css-reheart">
+                <div class="logo">
+                    <a href="/"><img src="images/logo_seoul.svg" alt="RE:HEART logo" style="width: 150px;margin-inline:80px"></a>
+                </div>
+                <div class="menu">
+                    <ul style="display: flex;list-style:none;gap:50px;margin-inline:250px;">
+                        <li>
+                            <a style="display: inline-block; color:#000000;font-size:15px;padding: 20px;text-decoration-line: none;" href="/map">지도</a>
+                        </li>
+                        <li>
+                            <a style="display: inline-block; color:#9a9a9a;font-size:15px;padding: 20px;text-decoration-line: none;" href="/explain">설명</a>
+                        </li>
+                        <li>
+                            <a style="display: inline-block; color:#9a9a9a;font-size:15px;padding: 20px;text-decoration-line: none;" href="/aboutus">우리</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div style="flex-grow: 1;display:flex;flex-direction:row;margin-inline:30px;height:50%;">
+                
+
+            </div>
+        </div>
+    </div>
+    <div style="position:relative;">
+    
+    <div id="map" style="width:100%;height:700px;margin-top: 10px;">
+
+        <script>
+            const onclicked = 1
+        </script>
+        
+        <div style="position: absolute;">
+            <input type="text" id="tbox" onKeypress="javascript:if(event.keyCode==13) {
+                $('#searchButton').trigger('click'); 
+            }"
+            style="width: 1000px; height: 30px; text-align: center; border: 1px white; border-radius: 5px;position: fixed;left: 270px;top: 130px; z-index: 10;"
+        ></div>
+
+    </div>
+    
+    <div style="position: absolute;">
+    <button id="searchButton" style="position: fixed;right: 140px;top: 130px; z-index: 10;"></button>
+</div>
+<div style="position: absolute;">
+    <div class="call119" style="border: 3px solid #ff9b9b; border-radius: 100%; background-color: #fff5f5;width: 50px; height: 50px; text-align: center; z-index: 10; position: fixed; left: 100px;top: 650px;">
+    <a href="tel:119"><img src="images/call.svg" style="width: 30px; height:30px; margin-top: 10px;"> </a> </div></div>
+</div></div>
+</body>
+
+</html>
